@@ -24,5 +24,7 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ]
+  ],
+  "theme_color": "#f7df1e",
+  "background_color": "#ffffff"
 }
