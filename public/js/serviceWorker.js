@@ -34,15 +34,15 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch event - intercept requests to serve cached content
+// Fetch event - serve cached content if offline
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-        return fetch(event.request);
-      })
+    .then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+      return fetch(event.request);
+    })
   );
 });
