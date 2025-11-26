@@ -31,13 +31,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        # with:
+        #   # Upload entire repository
+        #   path: '.'
+
+      - name: Install Node@20
+        uses: actions/setup-node@v3
         with:
-          # Upload entire repository
-          path: '.'
+          node-version: "20.18.0"
+
+      - name: Update npm
+        run: npm install -g npm@latest
+
+      - name: Install dependencies
+        run: npm install
+        
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
