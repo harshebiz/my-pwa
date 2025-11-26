@@ -52,9 +52,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # Build the project (only if you need to build files before deployment)
-      - name: Build the project
-        run: npm run build  # Replace with your specific build command, if needed (e.g., `npm run build` or `webpack`)
+      # # Build the project (only if you need to build files before deployment)
+      # - name: Build the project
+      #   run: npm run build  # Replace with your specific build command, if needed (e.g., `npm run build` or `webpack`)
 
       # Upload artifact (we're going to deploy the 'public' folder, where static files are built)
       - name: Upload artifact
