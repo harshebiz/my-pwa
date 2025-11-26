@@ -28,30 +28,37 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      # Checkout the repository to the GitHub Actions runner
+      - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Setup Pages (necessary for deploying to GitHub Pages)
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Upload artifact (we're going to deploy the 'public' folder, where static files are built)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-        # with:
-        #   # Upload entire repository
-        #   path: '.'
+        with:
+          path: 'public'  # Ensure the output path points to your public directory (where the built files live)
 
-      - name: Install Node@20
+      # Install Node.js version 20
+      - name: Install Node.js (version 20)
         uses: actions/setup-node@v3
         with:
           node-version: "20.18.0"
 
+      # Update npm to the latest version
       - name: Update npm
         run: npm install -g npm@latest
 
+      # Install project dependencies
       - name: Install dependencies
         run: npm install
-        
+
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
