@@ -9,7 +9,7 @@ document.addEventListener("click", function() {
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
         navigator.serviceWorker
-            .register("/my-pwa/js/serviceWorker.js", { scope: '/my-pwa/' })
+            .register("/my-pwa/serviceWorker.js", { scope: '/my-pwa/' })
             .then(function() {
                 console.log("Service Worker registered successfully");
             })
