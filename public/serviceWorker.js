@@ -3,8 +3,6 @@ var assets = [
     "/my-pwa/",
     "/my-pwa/index.html",
     "/my-pwa/js/app.js",
-    '/my-pwa/icons/icon_32x32.png',
-    '/my-pwa/icons/icon_128x128.png',
     '/my-pwa/icons/icon_256x256.png',
     '/my-pwa/icons/icon_512x512.png',
 ]
