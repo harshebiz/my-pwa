@@ -1,12 +1,12 @@
 const CACHE_NAME = 'my-pwa-cache-v1';
 var assets = [
-    "https://harshebiz.github.io/my-pwa/",
-    "https://harshebiz.github.io/my-pwa/index.html",
-    "https://harshebiz.github.io/my-pwa/js/app.js",
-    'https://harshebiz.github.io/my-pwa/icons/icon_32x32.png',
-    'https://harshebiz.github.io/my-pwa/icons/icon_128x128.png',
-    'https://harshebiz.github.io/my-pwa/icons/icon_256x256.png',
-    'https://harshebiz.github.io/my-pwa/icons/icon_512x512.png',
+    "/my-pwa/",
+    "/my-pwa/index.html",
+    "/my-pwa/js/app.js",
+    '/my-pwa/icons/icon_32x32.png',
+    '/my-pwa/icons/icon_128x128.png',
+    '/my-pwa/icons/icon_256x256.png',
+    '/my-pwa/icons/icon_512x512.png',
 ]
 
 self.addEventListener('install', (event) => {

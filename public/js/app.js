@@ -8,7 +8,7 @@ document.addEventListener("click", function() {
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
         navigator.serviceWorker
-            .register("https://harshebiz.github.io/my-pwa/js/serviceWorker.js")
+            .register("/my-pwa/js/serviceWorker.js", {scope: '/my-pwa/'})
             .then(function() {
                 console.log("service worker registered")
             })
